@@ -38,12 +38,12 @@ export default function Home() {
 
           {/* Shop Section */}
           <section id="shop" className="shop py-20 px-4 text-center">
-            <h2 className="text-4xl font-bold mb-12">Our Products</h2>
+            <h2 className="text-4xl font-bold text-black mb-12">Our Products</h2>
             <Products />
           </section>
 
           {/* About Section */}
-          <section id="about" className="about py-20 px-4 text-center bg-white">
+          <section id="about" className="about py-20 px-4 text-center bg-black">
             <h2 className="text-4xl font-bold mb-8">About Us</h2>
             <p className="max-w-4xl mx-auto leading-relaxed">
               Welcome to Fashion Boutique, where style meets comfort. We offer high-quality clothing for men, women, and kids at affordable prices.
@@ -51,7 +51,7 @@ export default function Home() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="contact py-20 px-4 text-center bg-white">
+          <section id="contact" className="contact py-20 px-4 text-center bg-black">
             <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
             <form className="max-w-lg mx-auto flex flex-col gap-4">
               <input type="text" placeholder="Your Name" required className="p-3 border rounded-md" />

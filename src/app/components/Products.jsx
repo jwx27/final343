@@ -100,10 +100,10 @@ export default function Products() {
       {/* Products */}
       <div className="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {products.map(product => (
-          <div key={product.id} className="product-card bg-white rounded-lg overflow-hidden shadow-md hover:-translate-y-2 transition-transform">
+          <div key={product.id} className="product-card bg-grey rounded-lg overflow-hidden shadow-md hover:-translate-y-2 transition-transform">
             <img src={product.image} alt={product.name} className="product-img w-full h-48 object-cover" />
             <div className="product-info p-6">
-              <h3 className="font-bold text-lg mb-1">{product.name}</h3>
+              <h3 className="font-bold text-black mb-1">{product.name}</h3>
               <p className="text-gray-600 mb-2">{product.category}</p>
               <p className="price font-bold text-pink-500 text-lg mb-4">${product.price.toFixed(2)}</p>
               <button 
