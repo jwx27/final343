@@ -1,76 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Font Awesome - only for fashion boutique icons */
-.fashion-boutique .fa-icon {
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-}
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-/* Animations - only for fashion boutique notifications */
-.fashion-boutique .notification {
-  animation: fadeInOut 2s ease-in-out;
-}
-
+/* Animations */
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; transform: translateY(10px); }
   10%, 90% { opacity: 1; transform: translateY(0); }
 }
 
-/* Reset some styles that might affect the main navigation */
-nav:not(.fashion-boutique nav) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+.animate-fade-in-out {
+  animation: fadeInOut 2s ease-in-out;
 }
 
-nav:not(.fashion-boutique nav) ul {
-  display: flex;
-  list-style: none;
+/* Custom styles */
+.product-card {
+  transition: transform 0.3s ease;
 }
 
-nav:not(.fashion-boutique nav) li {
-  margin-left: 2rem;
+.cart-modal {
+  transition: opacity 0.3s ease;
 }
-
-nav:not(.fashion-boutique nav) a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav:not(.fashion-boutique nav) a:hover {
-  color: #ff6b6b;
-}
-
-/* Shopping cart icon in main nav */
-.cart-icon {
-  position: relative;
-  cursor: pointer;
-}
-
-.cart-count {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #ff6b6b;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.8rem;
-}
-
-/* Fashion boutique specific styles */
-.fashion-boutique nav {
-  /* Your fashion boutique nav styles here */
-  /* These won't affect the main navigation */
-  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
