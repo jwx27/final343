@@ -8,10 +8,10 @@ export default function Menubar() {
             <Link href='/'>Home</Link>
           </li>
           <li>
-            <Link href='/'>Midterm Part I - Expense</Link>
+            <Link href='https://expense-alpha-ruby.vercel.app/'>Midterm Part I - Expense</Link>
           </li>
           <li>
-            <Link href='/'>Midterm Part II - own site</Link>
+            <Link href='https://miterm-part-2.vercel.app/'>Midterm Part II - own site</Link>
           </li>
         </ul>
       </>
