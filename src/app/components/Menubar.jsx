@@ -13,6 +13,9 @@ export default function Menubar() {
           <li>
             <Link href='https://miterm-part-2.vercel.app/'>Midterm Part II - own site</Link>
           </li>
+          <li>
+            <Link href='/faq'>FAQ</Link>
+          </li>
         </ul>
       </>
     )
